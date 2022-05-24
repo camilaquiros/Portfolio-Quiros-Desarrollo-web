@@ -1,0 +1,881 @@
+/* PARA COPYPASTE
+font-family: 'Inconsolata', monospace;
+font-family: 'Raleway', sans-serif;
+#EEEEEA; Blanco
+#F2FF8D; Amarillo
+#FF99C1; Rosado
+#04BAD8; Turquesa
+#BF9EEC; Violeta
+#393838 Negro */
+
+
+
+/* RESETEO */
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: #393838;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* ESTILOS GENERALES */
+
+    /* COLORES */
+
+.slider {
+    background-color: #BF9EEC;
+}
+
+.profile {
+    background-color: #EEEEEA;
+}
+
+.location {
+    background-color: #F2FF8D;
+}
+
+.skills {
+    background-color: #FF99C1;
+}
+
+footer {
+    background-color: #04BAD8;
+}
+
+.experience {
+    /* background-image: url(../assets/images/backgroundBody.png); */
+    background-color: #FF99C1;
+}
+
+.bodyContact {
+    background-color: #BF9EEC;
+}
+
+    /* WHATSAPP */
+
+.whatsapp {
+    position: fixed;
+    z-index: 3;
+    right: 10px;
+    bottom: 10px;
+    display: inline-block;
+}
+
+.whatsapp img {
+    width: 45px;
+    height: 45px;
+}
+
+    /* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    background-image: url(../assets/images/background.png);
+    background-repeat: repeat;
+}
+
+.brand {
+    text-align: center;
+    padding: 1%;
+    border-style: dotted;
+    border-radius: 25px;
+    background-color: #BF9EEC;
+    color: #393838;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.5em;
+    opacity: 80%;
+    align-self: center;
+}
+
+.navbarDesk {
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+}
+
+.navbarDesk ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+
+.navbarDesk li {
+    font-size: 2em;
+    padding: 2%;
+}
+
+.navbarMobile {
+    display: none;
+}
+
+    /* FOOTER */
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5em;
+    justify-content: space-between;
+    padding: 2% 2% 2% 5%;
+}
+
+.footerRight {
+    /* display: flex; */
+    width: 70%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footerNav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 2% 0 1% 5%;
+    width: 100%;
+}
+
+.footerNav a, .footerNav li {
+    padding: 0 2% 0 2%;
+    color: #EEEEEA;
+}
+
+.footerRight p {
+    margin: 1%;
+    border-top: #EEEEEA solid;
+    color: #EEEEEA;
+    padding: 2% 0 0 2%;
+}
+
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 20%;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.socials a {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: #EEEEEA;
+    justify-content: flex-start;
+}
+
+.socials li {
+    width: 100%;
+}
+
+.socials i {
+    font-size: 1.5em;
+}
+
+.socials p {
+    align-self: center;
+    padding-left: 7%;
+}
+
+.parrafoMobile {
+    display: none;
+}
+
+/* INDEX */
+
+    /* SLIDER */
+
+/* .slider {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0 0 2% 0;
+}
+    
+.slider img {
+    width: 20%;
+} */
+
+.slider {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sliderDiv {
+    display: grid;
+    grid-template-areas: 
+    "imagen1 imagen1 imagen1 imagen2"
+    "imagen4 imagen3 imagen3 imagen2"
+    "imagen4 imagen5 imagen6 imagen6";
+    margin: 5vh 10px;
+    width: 95%;
+    height: 95vh;
+    grid-template-rows: 3fr 4fr 4fr;
+    grid-template-columns: 2fr 4fr 1fr 2fr;
+    /* margin: 3% 0 3% 0;
+    grid-template-rows: 35vh 45vh 45vh;
+    grid-template-columns: 20vw 40vw 10vw 20vw;
+    justify-items: center;
+    align-items: center; */
+    grid-gap: 20px;
+}
+
+#imagen1, #imagen2, #imagen3, #imagen4, #imagen5, #imagen6 {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+#imagen1 {
+    grid-area: imagen1;
+    background-image: url(../assets/images/index/image1.jpeg);
+    background-position-y: 40%;
+    border: #F2FF8D solid;
+}
+
+#imagen2 {
+    grid-area: imagen2;
+    background-image: url(../assets/images/index/image2.jpeg);
+    background-position-x: center;
+    background-position-y: 20%;
+    border: #04BAD8 solid;
+}
+
+#imagen3 {
+    grid-area: imagen3;
+    background-image: url(../assets/images/index/image3.jpeg);
+    border: #FF99C1 solid;
+    background-position: center;
+}
+
+#imagen4 {
+    grid-area: imagen4;
+    background-image: url(../assets/images/index/image4-1.jpeg);
+    border: #04BAD8 solid;
+}
+
+#imagen5 {
+    grid-area: imagen5;
+    background-image: url(../assets/images/index/image5-1.png);
+    background-color: #393838;
+    background-position: center;
+    border: #F2FF8D solid;
+}
+
+#imagen6 {
+    grid-area: imagen6;
+    background-image: url(../assets/images/index/image6.jpeg);
+    border: #FF99C1 solid;
+}
+
+    /* PROFILE */
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2% 0 2% 0;
+    opacity: 80%;
+}
+
+.profile p {
+    width: 50%;
+    color: #393838;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.profile img{
+    width: 30%;
+    border-radius: 100%;
+    border: #04BAD8;
+    border-style: dashed;
+    padding: 0.5%;
+}
+
+    /* LOCATION */
+
+.location {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5% 2% 5% 2%;
+    align-items: center;
+}   
+
+.location iframe {
+    border: #BF9EEC;
+    padding: 0.5%;
+    border-style: dashed;
+    width: 40%;
+    height: 450px;
+}
+
+.location p{
+    width: 50%;
+    font-size: 2em;
+    text-align: center;
+    color: #393838;
+    opacity: 70%;
+}
+
+    /* SKILLS */
+    
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2% 5% 2% 5%;
+}
+
+.skill {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 25%;
+    padding: 2%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.skill img {
+    width: 60%;
+    opacity: 60%;
+}
+
+.skillImage {
+    position: relative;
+    text-align: center;
+}
+
+.titleSkill, .titleSkillBottom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #F2FF8D;
+    font-weight: bold;
+}
+
+.titleSkill {
+    font-size: 7em;
+}
+
+.titleSkillBottom {
+    font-size: 5em;
+}
+
+.skill p {
+    padding: 5%;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: #393838;
+    text-align: center;
+    color: #F2FF8D;
+    font-family: 'Inconsolata', monospace;
+}
+
+/* EXPERIENCIA */
+
+.experience {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    padding: 2% 0 2% 0;
+    width: 100%;
+}
+
+.experience h2 {
+    color: #F2FF8D;
+    font-size: 3em;
+    padding: 2% 0 3% 0;
+}
+
+.experience p {
+    color: #F2FF8D;
+    font-size: 2em;
+    padding: 1%;
+    text-align: center;
+    width: 70%;
+}
+
+.meme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2%;
+    width: 100%;
+}
+
+.meme img {
+    border-radius: 20px;
+    border-style: dashed;
+    padding: 1%;
+    border-color: #04BAD8;
+    margin: 2%;
+}
+
+.memeVideo {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+.memeVideoTab {
+    background-image: url(../assets/images/experience/tab.png);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    padding: 12% 0 3% 0;
+    margin-top: 5%;
+    width: 100%;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.memeVideoTab video {
+    border-radius: 20px;
+    width: auto;
+}
+
+.bolder {
+    font-weight: bold;
+}
+
+.worm {
+    position: fixed;
+    bottom: 2px;
+    left: 5%;
+}
+
+.bell {
+    position: fixed;
+    top: 65%;
+    left: 80%;
+}
+
+.mouth {
+    position: fixed;
+    top: 60%;
+    right: 80%;
+}
+
+.toaster {
+    position: fixed;
+    top: 25%;
+    left: 88%;
+    z-index: 2;
+}
+
+.clock {
+    position: fixed;
+    top: 28%;
+    right: 90%;
+    z-index: 2;
+}
+
+    /* CONTACTO */
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    padding: 3% 0 10% 0;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+}
+
+.contact h2 {
+    color: #F2FF8D;
+    font-size: 3em;
+    padding-bottom: 2%;
+}
+
+.contact form {
+    color: #F2FF8D;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact label, .contact p {
+    padding: 4% 0 2% 0;
+    display: block;
+    text-align: center;
+}
+
+.contact input {
+    width: 50%;
+    height: 25px;
+}
+
+.contact textarea {
+    width: 70%;
+}
+
+#button {
+    margin-top: 2%;
+    padding: 1%;
+    background-color: #FF99C1;
+    color: #F2FF8D;
+    font-size: 1em;
+    border-radius: 20px;
+    border-style: none;
+    height: 10%;
+    display: block;
+    width: 30%;
+}
+
+/* RESPONSIVE TABLET */
+
+@media screen and (max-width:1200px) {
+
+    .brand {
+        font-size: 1em;
+        margin: 1% 0 1% 0;
+    }
+
+    .navbarDesk li {
+        font-size: 1.5em;
+    }
+
+    footer {
+        font-size: 1em;
+    }
+
+
+    /* INDEX */
+
+    .profile p {
+        font-size: 1em;
+    }
+
+    .location p {
+        font-size: 1em;
+    }
+
+    .location iframe {
+        height: 300px;
+    }
+
+    .titleSkill {
+        font-size: 5em;
+    }
+
+    .titleSkillBottom {
+        font-size: 3em;
+    }
+
+    .skill p {
+        font-size: 1em;
+    }
+
+
+}
+
+@media screen and (max-width:850px) {
+
+    header {
+        padding: 2% 0 2% 0;
+    }
+    
+    .brand {
+        font-size: 0.8em;
+    }
+
+    .navbarDesk {
+        width: 50%;
+    }
+
+    .navbarDesk li {
+        font-size: 1.2em;
+    }
+
+    .sliderDiv {
+        grid-template-areas: 
+        "imagen1 imagen1 imagen2"
+        "imagen3 imagen3 imagen2";
+        height: 80vh;
+        grid-template-rows: 3fr 4fr;
+        grid-template-columns: 2fr 4fr 2fr;
+    }
+
+    #imagen4, #imagen5, #imagen6 {
+        display: none;
+    }
+
+    .skill {
+        width: 40%;
+    }
+
+    .titleSkill {
+        font-size: 4em;
+    }
+
+    .titleSkillBottom {
+        font-size: 2em;
+    }
+
+    .worm, .bell, .clock, .mouth, .toaster {
+        display: none;
+    }
+
+    .memeVideoTab video {
+        width: 85%;
+    }
+
+    .contact {
+        padding: 5% 0 5% 0;
+    }
+
+}   
+
+/* RESPONSIVE MOBILE */
+
+@media screen and (max-width:550px) {
+
+    /* GENERAL */
+
+    .whatsapp img {
+        width: 30px;
+        height: 30px;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 3% 0 3% 0;
+        box-shadow: 0px 10px 10px #3938385d;
+        z-index: 1;
+    }
+
+    .brand {
+        padding: 1% 3% 1% 3%;
+        font-size: 1em;
+    }
+  
+    .navbarDesk {
+        width: 100%;
+    }
+
+    .navbarDesk ul{
+        justify-content: center;
+    }
+
+    /* HAMBURGUESA */
+
+    /* .navbarDesk {
+        display: none;
+    }
+
+    .navbarMobile {
+        display: flex;
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbarMobile ul {
+        font-size: 0;
+    }
+
+    .navbarMobile li {
+        display: inline-block;
+        width: 25%;
+        position:relative;
+        font-size: 18px;
+    }
+
+    .bars {
+        background-color: #04BAD8;
+        padding: 100%;
+        border-radius: 2px;
+        color: #F2FF8D;
+    }
+
+    .navbarMobile ul ul {
+        position: absolute;
+        display: none;
+    }
+
+    .navbarMobile ul ul li {
+        display: block;
+        padding: 5%;
+        background-color: #04bcd8c8;
+        width: 100%;
+    }
+
+    .navbarMobile ul li:hover ul {
+        display:block;
+        z-index: 5;
+        
+     }
+
+    .nav {
+        color: #F2FF8D;
+    } */
+
+    footer {
+        flex-direction: column;
+        padding: 2% 0 5% 0;
+        width: 100%;
+        align-items: center;
+    }
+
+    .footerRight {
+        width: 100%;
+    }
+
+    .footerRight p {
+        display: none;
+    }
+
+    .footerNav {
+        flex-direction: column;
+        align-items: center;
+        padding: 2% 0 2% 0;
+        font-size: 1em;
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    .footerNav li {
+        padding: 2% 0 2% 0;
+    }
+
+    .socials {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .socials p {
+        display: none;
+    }
+
+    .socials li {
+        width: auto;
+        padding: 3% 5% 3% 5%;
+    }
+
+    .parrafoMobile {
+        display: flex;
+        align-self: center;
+        margin: 1%;
+        border-top: #EEEEEA solid;
+        color: #EEEEEA;
+        padding: 2% 0 0 2%;
+        text-align: center;
+    }
+    
+    /* INDEX */
+
+    .slider {
+        display: none;
+    }
+
+    .profile {
+        flex-direction: column;
+        padding: 5% 0 5% 0;
+    }
+
+    .profile img {
+        width: 70%;
+    }
+
+    .profile p {
+        width: 80%;
+        padding-top: 5%;
+    }
+
+    .location {
+        flex-direction: column;
+    }
+
+    .location p {
+        width: 80%;
+        padding-bottom: 5%;
+    }
+
+    .location iframe {
+        width: 80%;
+    }
+
+    .skills {
+        padding-top: 5%;
+    }
+
+    .skill {
+        width: 80%;
+        padding: 5% 0 5% 0;
+    }
+
+    /* EXPERIENCIA */
+
+    .meme img {
+        width: 80%;
+    }
+
+    .experience h2 {
+        font-size: 2em;
+    }
+
+    .meme p {
+        font-size: 1em;
+    }
+
+    .memeVideo p{
+        font-size: 1em;
+    }
+
+    /* CONTACTO */
+
+    .contact h2{
+        font-size: 1.5em;
+    }
+
+    .contact form {
+        font-size: 1em;
+        padding-bottom: 5%;
+    }
+}
