@@ -1,8 +1,3 @@
 Wireframe del proyecto:
 https://whimsical.com/proyecto-portfolio-BcVddKb6jyGuTu2PzaCvJi
 
-Grid aplicado a galería de fotos
-
-El responsive esta basado un poco mas al orden del contenido y no tanto en los breakpoints de desktop-tablet-celular, entonces hice cambios a los 1200px, 850px, y el ultimo a los 550px y que se vea correcto hasta lo mas chico posible (menos de 300px me pareció mas que suficiente, el otro dia dijeron que el estándar de modelos de celulares en Argentina era de 360px por ejemplo)
-
-.navMobile y hamburguesa no utilizado
