@@ -5,12 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+    <!-- FONTAWESOME - ICONOS -->
     <script src="https://kit.fontawesome.com/44dc849d6f.js" crossorigin="anonymous"></script>
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700&family=Raleway:wght@200;400;700&display=swap" rel="stylesheet">
+    <!-- ANIMATE.CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <title>Contacto</title>
 </head>
@@ -19,7 +25,7 @@
     <div class="whatsapp"><a href="#https://web.whatsapp.com" target="_blank"><img src="../assets/images/whatsapp.png" alt="WhatsApp"></a></div>
     <header>
         <!-- MARCA -->
-        <a href="../index.html" class="brand" data-aos="fade-right"><h1> <div> &lt;Camila&gt; </div>  <div> &lt;/Web Developer&gt; </div> </h1></a>
+        <a href="../index.html" class="brand" data-aos="fade-right"><h1> <div class="fw-bold"> &lt;Camila&gt; </div>  <div class="fw-bold"> &lt;/Web Developer&gt; </div> </h1></a>
         <!-- NAVBAR HEADER-->
         <!-- NAVBAR DESKTOP -->
         <nav class="navbarDesk" data-aos="fade-left">
@@ -48,13 +54,21 @@
         <div class="contact">
             <h2>CONTACTO</h2>
             <form action="" method="" enctype="">
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre">
-                <label for="email">Email:</label>
-                <input type="text" name="email">
-                <p>Contáme un poco sobre tu idea de pagina web</p>
-                <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
-                <button id="button" class="animate__headShake">Enviar</button>
+                <div class="mb-3 col-sm-7 contactForm">
+                    <label for="formGroupExampleInput" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput">
+                </div>
+                <div class="mb-3 col-sm-7 contactForm">
+                    <label for="exampleFormControlInput1" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1">
+                </div>
+                <div class="mb-3 contactForm">
+                    <label for="exampleFormControlTextarea1" class="form-label">Contáme un poco sobre tu idea de pagina web</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                </div>
+                <div class="col-12 contactForm">
+                    <button class="btn btn-primary animate__headShake" id="button" type="submit">Enviar</button>
+                </div>
             </form>
         </div>
     </main>
@@ -94,5 +108,7 @@
     <script>
       AOS.init();
     </script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

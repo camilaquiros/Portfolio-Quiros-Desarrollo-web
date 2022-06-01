@@ -18,6 +18,7 @@ font-family: 'Raleway', sans-serif;
 
 html {
     height: 100%;
+    width: 100%;
 }
 
 body {
@@ -27,6 +28,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     justify-content: space-between;
+    width: 100vw;
 }
 
 main {
@@ -37,6 +39,10 @@ main {
 
 a {
     text-decoration: none;
+    color: #393838;
+}
+
+a:hover {
     color: #393838;
 }
 
@@ -75,6 +81,64 @@ footer {
 .bodyContact {
     background: linear-gradient(0deg, rgba(255,153,193,1) 0%, rgba(191,158,236,1) 60%);
     background-repeat: no-repeat;
+}
+
+    /* COOKIES */
+
+.cookies {
+    width: 100vw;
+}    
+
+.cookiesBack {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.cookiesContent {
+    height: 30vh;
+    background-image: url(../assets/images/cookiesPattern.png);
+    background-size: contain;
+    background-color: #EEEEEA;
+}
+
+.cookiesText {
+    display: flex;
+    font-family: 'Inconsolata', monospace;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    color: #393838;
+}
+
+.cookiesFooter {
+    border-style: none;
+}
+
+.acceptCookies, .configuration {
+    font-weight: bold;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: #393838;
+    color: #393838;
+    text-decoration: none;
+}
+
+.acceptCookies:hover, .configuration:hover {
+    background-color: #F2FF8D;
+    color: #393838;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: #393838;
+}
+
+.acceptCookies {
+    background-color: #BF9EEC;
+}
+
+.configuration {
+    background-color: #EEEEEA;
 }
 
     /* WHATSAPP */
@@ -165,7 +229,7 @@ footer {
 }
 
 .footerNav a, .footerNav li {
-    padding: 0 2% 0 2%;
+    padding: 0 2%;
     color: #EEEEEA;
 }
 
@@ -296,7 +360,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 2% 0 2% 0;
+    padding: 2% 0;
     opacity: 80%;
 }
 
@@ -322,7 +386,7 @@ footer {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 5% 2% 5% 2%;
+    padding: 5% 2%;
     align-items: center;
 }   
 
@@ -348,14 +412,14 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 2% 5% 2% 5%;
+    padding: 2% 5%;
 }
 
 .skill {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 25%;
+    width: 30%;
     padding: 2%;
     align-items: center;
     justify-content: space-evenly;
@@ -405,14 +469,49 @@ footer {
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
-    padding: 2% 0 2% 0;
+    padding: 2% 0;
     width: 100%;
 }
 
 .experience h2 {
     color: #F2FF8D;
     font-size: 3em;
-    padding: 2% 0 3% 0;
+    padding: 3% 0 2% 0;
+}
+
+.experienceButton {
+    color: #F2FF8D;
+    text-decoration: none;
+    font-size: 1em;
+    background-color: #BF9EEC;
+    border-style: dashed;
+    border-color: #393838;
+    border-width: 2px;
+}
+
+.experienceButton:hover {
+    background-color: #04BAD8;
+    border-style: dashed;
+    border-color: #393838;
+    border-width: 2px;
+    color: #F2FF8D;
+}
+
+.experienceButton:focus {
+    color: #F2FF8D;
+    text-decoration: none;
+    font-size: 1em;
+    background-color: #04BAD8;
+    border-style: dashed;
+    border-color: #393838;
+    border-width: 2px;
+}
+
+.experienceCard {
+    background-color: #FF99C1;
+    border-style: none;
+    align-items: center;
+    justify-content: center;
 }
 
 .experience p {
@@ -533,19 +632,11 @@ footer {
     align-items: center;
 }
 
-.contact label, .contact p {
-    padding: 4% 0 2% 0;
-    display: block;
-    text-align: center;
-}
-
-.contact input {
-    width: 50%;
-    height: 25px;
-}
-
-.contact textarea {
-    width: 70%;
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
 }
 
 #button {
@@ -569,7 +660,7 @@ footer {
 
     .brand {
         font-size: 1em;
-        margin: 1% 0 1% 0;
+        margin: 1% 0;
     }
 
     .navbarDesk li {
@@ -612,16 +703,16 @@ footer {
 
 @media screen and (max-width:850px) {
 
-    header {
-        padding: 2% 0 2% 0;
-    }
-    
     .brand {
         font-size: 0.8em;
     }
 
     .navbarDesk {
         width: 50%;
+    }
+
+    .navbarDesk ul {
+        padding: 0;
     }
 
     .navbarDesk li {
@@ -666,7 +757,7 @@ footer {
     }
 
     .contact {
-        padding: 5% 0 5% 0;
+        padding: 5% 0;
     }
 
 }   
@@ -684,13 +775,13 @@ footer {
 
     header {
         flex-direction: column;
-        padding: 3% 0 3% 0;
+        padding: 3% 0;
         box-shadow: 0px 10px 10px #3938385d;
         z-index: 1;
     }
 
     .brand {
-        padding: 1% 3% 1% 3%;
+        padding: 1% 3%;
         font-size: 1em;
     }
   
@@ -701,59 +792,6 @@ footer {
     .navbarDesk ul{
         justify-content: center;
     }
-
-    /* HAMBURGUESA */
-
-    /* .navbarDesk {
-        display: none;
-    }
-
-    .navbarMobile {
-        display: flex;
-        text-align: center;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .navbarMobile ul {
-        font-size: 0;
-    }
-
-    .navbarMobile li {
-        display: inline-block;
-        width: 25%;
-        position:relative;
-        font-size: 18px;
-    }
-
-    .bars {
-        background-color: #04BAD8;
-        padding: 100%;
-        border-radius: 2px;
-        color: #F2FF8D;
-    }
-
-    .navbarMobile ul ul {
-        position: absolute;
-        display: none;
-    }
-
-    .navbarMobile ul ul li {
-        display: block;
-        padding: 5%;
-        background-color: #04bcd8c8;
-        width: 100%;
-    }
-
-    .navbarMobile ul li:hover ul {
-        display:block;
-        z-index: 5;
-        
-     }
-
-    .nav {
-        color: #F2FF8D;
-    } */
 
     footer {
         flex-direction: column;
@@ -773,7 +811,7 @@ footer {
     .footerNav {
         flex-direction: column;
         align-items: center;
-        padding: 2% 0 2% 0;
+        padding: 2% 0;
         font-size: 1em;
         font-weight: bold;
         text-transform: uppercase;
@@ -781,7 +819,7 @@ footer {
     }
 
     .footerNav li {
-        padding: 2% 0 2% 0;
+        padding: 2% 0;
     }
 
     .socials {
@@ -798,7 +836,7 @@ footer {
 
     .socials li {
         width: auto;
-        padding: 3% 5% 3% 5%;
+        padding: 3% 5%;
     }
 
     .parrafoMobile {
@@ -819,7 +857,7 @@ footer {
 
     .profile {
         flex-direction: column;
-        padding: 5% 0 5% 0;
+        padding: 5% 0;
     }
 
     .profile img {
@@ -850,7 +888,7 @@ footer {
 
     .skill {
         width: 80%;
-        padding: 5% 0 5% 0;
+        padding: 5% 0;
     }
 
     /* EXPERIENCIA */
@@ -880,5 +918,6 @@ footer {
     .contact form {
         font-size: 1em;
         padding-bottom: 5%;
+        width: 100%;
     }
 }

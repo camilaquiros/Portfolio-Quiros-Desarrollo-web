@@ -5,12 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+    <!-- FONTAWESOME - ICONOS -->
     <script src="https://kit.fontawesome.com/44dc849d6f.js" crossorigin="anonymous"></script>
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700&family=Raleway:wght@200;400;700&display=swap" rel="stylesheet">
+    <!-- ANIMATE.CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
     <title>Experiencia</title>
 </head>
@@ -25,7 +33,7 @@
     <div class="clock gif"><img src="../assets/images/experience/clock.gif" alt=""></div>
     <header>
         <!-- MARCA -->
-        <a href="../index.html" class="brand" data-aos="fade-right"><h1> <div> &lt;Camila&gt; </div>  <div> &lt;/Web Developer&gt; </div> </h1></a>
+        <a href="../index.html" class="brand" data-aos="fade-right"><h1> <div class="fw-bold"> &lt;Camila&gt; </div>  <div class="fw-bold"> &lt;/Web Developer&gt; </div> </h1></a>
         <!-- NAVBAR HEADER-->
         <!-- NAVBAR HEADER-->
         <!-- NAVBAR DESKTOP -->
@@ -54,9 +62,17 @@
     <main class="experience">
         <h2  data-aos="zoom-in">EXPERIENCIA</h2>
         <div class="meme"  data-aos="zoom-in">
-            <p>Y aquí estaría mi experiencia en desarrollo web</p>
-            <img src="../assets//images/experience/IfIHaveOne.gif" alt="Gif si tuviera uno!">
-            <p class="bolder">¡SI TUVIERA UNA!</p>
+            <p>
+                <button class="btn btn-link experienceButton" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Y aquí estaría mi experiencia en desarrollo web
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body experienceCard">
+                    <img src="../assets//images/experience/IfIHaveOne.gif" alt="Gif si tuviera uno!">
+                    <p class="bolder">¡SI TUVIERA UNA!</p>
+                </div>
+            </div>
         </div>
         <div class="memeVideo"  data-aos="zoom-in">
             <p>Así que les dejo la página web de Homero</p>
