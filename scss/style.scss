@@ -1,0 +1,21 @@
+@import "./base/variables";
+@import "./componentes/reset";
+@import "./componentes/colores";
+
+@import "./componentes/cookies";
+@import "./componentes/whatsapp";
+
+@import "./componentes/header";
+@import "./componentes/footer";
+
+//INDEX
+@import "./componentes/pages/index/gallery";
+@import "./componentes/pages/index/profile";
+@import "./componentes/pages/index/location";
+@import "./componentes/pages/index/skills";
+
+//EXPERIENCIA
+@import "./componentes/pages/experience.scss";
+
+//CONTACTO
+@import "./componentes/pages/contact"

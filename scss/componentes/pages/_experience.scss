@@ -1,0 +1,166 @@
+/* EXPERIENCIA */
+
+.experience {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    padding: 2% 0;
+    width: 100%;
+
+    h2 {
+        color: $amarillo;
+        font-size: 3em;
+        padding: 3% 0 2% 0;
+
+        @media screen and (max-width:550px) {
+            font-size: 2em;
+        }
+    }
+
+    p {
+        color: $amarillo;
+        font-size: 2em;
+        padding: 1%;
+        text-align: center;
+        width: 70%;
+    }
+}
+
+.experienceButton {
+    color: $amarillo;
+    text-decoration: none;
+    font-size: 1em;
+    background-color: $violeta;
+    border-style: dashed;
+    border-color: $negro;
+    border-width: 2px;
+
+    &:hover {
+        background-color: $turquesa;
+        border-style: dashed;
+        border-color: $negro;
+        border-width: 2px;
+        color: $amarillo;
+    }
+
+    &:focus {
+        color: $amarillo;
+        text-decoration: none;
+        font-size: 1em;
+        background-color: $turquesa;
+        border-style: dashed;
+        border-color: $negro;
+        border-width: 2px;
+    }
+}
+
+.experienceCard {
+    background-color: $rosado;
+    border-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.meme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2%;
+    width: 100%;
+
+    img {
+        border-radius: 20px;
+        border-style: dashed;
+        padding: 1%;
+        border-color: $turquesa;
+        margin: 2%;
+
+        @media screen and (max-width:550px) {
+            width: 80%;
+        }
+    }
+
+    p {
+        @media screen and (max-width:550px) {
+            font-size: 1em;
+        }
+    }
+}
+
+.memeVideo {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+.memeVideoTab {
+    background-image: url(../assets/images/experience/tab.png);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    padding: 12% 0 3% 0;
+    margin-top: 5%;
+    width: 100%;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    video {
+        border-radius: 20px;
+        width: auto;
+
+        @media screen and (max-width:850px) {
+            width: 85%;
+        }
+    }
+}
+
+.bolder {
+    font-weight: bold;
+}
+
+.gif:hover {
+    transform: scale(1.5,1.5);
+    transition: all 1s;
+}
+
+.worm {
+    position: absolute;
+    bottom: 2px;
+    left: 5%;
+}
+
+.bell {
+    position: absolute;
+    top: 65%;
+    left: 80%;
+}
+
+.mouth {
+    position: absolute;
+    top: 60%;
+    right: 80%;
+}
+
+.toaster {
+    position: absolute;
+    top: 25%;
+    left: 88%;
+    z-index: 2;
+}
+
+.clock {
+    position: absolute;
+    top: 28%;
+    right: 90%;
+    z-index: 2;
+}
+
+@media screen and (max-width:850px) {
+    .worm, .bell, .clock, .mouth, .toaster {
+        display: none;
+    }
+}

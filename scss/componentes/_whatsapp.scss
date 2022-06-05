@@ -1,0 +1,21 @@
+    /* WHATSAPP */
+
+    .whatsapp {
+        position: fixed;
+        z-index: 3;
+        right: 10px;
+        bottom: 10px;
+        display: inline-block;
+
+        img {
+            width: 45px;
+            height: 45px;
+        }
+
+        @media screen and (max-width:550px) {
+            width: 20px;
+            height: 20px;
+            right: 30px;
+            bottom: 30px;
+        }
+    }

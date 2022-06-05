@@ -1,0 +1,47 @@
+    /* LOCATION */
+
+.location {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5% 2%;
+    align-items: center;
+
+    iframe {
+        border: $violeta;
+        padding: 0.5%;
+        border-style: dashed;
+        width: 40%;
+        height: 450px;
+
+        @media screen and (max-width:1200px){
+            height: 300px;
+        }
+
+        @media screen and (max-width:550px) {
+            width: 80%;
+        }
+    }
+
+    p {
+        width: 50%;
+        font-size: 2em;
+        text-align: center;
+        color: $negro;
+        opacity: 70%;
+
+        @media screen and (max-width:1200px){
+            font-size: 1em;
+        }
+
+        @media screen and (max-width:550px) {
+            width: 80%;
+            padding-bottom: 5%;
+        }
+    }
+
+    @media screen and (max-width:550px) {
+        flex-direction: column;
+    }
+}   

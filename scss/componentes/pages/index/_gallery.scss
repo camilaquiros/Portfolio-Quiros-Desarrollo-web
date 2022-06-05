@@ -1,0 +1,100 @@
+/* INDEX */
+    /* SLIDER/GRID */
+.slider {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media screen and (max-width:550px) {
+        display: none;
+    }
+}
+
+.sliderDiv {
+    display: grid;
+    grid-template-areas: 
+    "imagen1 imagen1 imagen1 imagen2"
+    "imagen4 imagen3 imagen3 imagen2"
+    "imagen4 imagen5 imagen6 imagen6";
+    margin: 5vh 10px;
+    width: 95%;
+    height: 95vh;
+    grid-template-rows: 3fr 4fr 4fr;
+    grid-template-columns: 2fr 4fr 1fr 2fr;
+    grid-gap: 20px;
+
+    @media screen and (max-width:850px) {
+        display: none;
+    }
+}
+
+.sliderDivTablet {
+    display: none;
+
+    @media screen and (max-width:850px) {
+        display: grid;
+        grid-template-areas: 
+        "imagen1 imagen1 imagen2"
+        "imagen3 imagen3 imagen2";
+        height: 80vh;
+        width: 95%;
+        grid-template-rows: 3fr 4fr;
+        grid-template-columns: 2fr 4fr 2fr;
+        grid-gap: 20px;
+        margin: 5vh 10px;
+    }
+}
+
+#imagen1, #imagen2, #imagen3, #imagen4, #imagen5, #imagen6 {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+#imagen1 {
+    grid-area: imagen1;
+    background-image: url(../assets/images/index/image1.jpeg);
+    background-position-y: 40%;
+    border: $amarillo solid;
+    animation-duration: 1s;
+}
+
+#imagen2 {
+    grid-area: imagen2;
+    background-image: url(../assets/images/index/image2.jpeg);
+    background-position-x: center;
+    background-position-y: 20%;
+    border: $turquesa solid;
+    animation-duration: 1s;
+}
+
+#imagen3 {
+    grid-area: imagen3;
+    background-image: url(../assets/images/index/image3.jpeg);
+    border: $rosado solid;
+    background-position: center;
+    animation-duration: 1s;
+}
+
+#imagen4 {
+    grid-area: imagen4;
+    background-image: url(../assets/images/index/image4-1.jpeg);
+    border: $turquesa solid;
+    animation-duration: 1s;
+}
+
+#imagen5 {
+    grid-area: imagen5;
+    background-image: url(../assets/images/index/image5-1.png);
+    background-color: $negro;
+    background-position: center;
+    border: $amarillo solid;
+    animation-duration: 1s;
+}
+
+#imagen6 {
+    grid-area: imagen6;
+    background-image: url(../assets/images/index/image6.jpeg);
+    border: $rosado solid;
+    animation-duration: 1s;
+}

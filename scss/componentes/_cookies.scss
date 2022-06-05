@@ -1,0 +1,58 @@
+    /* COOKIES */
+
+    .cookies {
+        width: 100vw;
+        padding-right: 0 !important;
+    }    
+    
+    .cookiesBack {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    
+    .cookiesContent {
+        height: 30vh;
+        background-image: url(../assets/images/cookiesPattern.png);
+        background-size: contain;
+        background-color: $blanco;
+    }
+    
+    .cookiesText {
+        display: flex;
+        font-family: $serif;
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+        align-items: center;
+        color: $negro;
+    }
+    
+    .cookiesFooter {
+        border-style: none;
+    }
+    
+    .acceptCookies, .configuration {
+        font-weight: bold;
+        border-width: 2px;
+        border-style: dashed;
+        border-color: $negro;
+        color: $negro;
+        text-decoration: none;
+    }
+    
+    .acceptCookies:hover, .configuration:hover {
+        background-color: $amarillo;
+        color: $negro;
+        border-width: 2px;
+        border-style: dashed;
+        border-color: $negro;
+    }
+    
+    .acceptCookies {
+        background-color: $violeta;
+    }
+    
+    .configuration {
+        background-color: $blanco;
+    }

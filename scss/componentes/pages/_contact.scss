@@ -1,0 +1,66 @@
+    /* CONTACTO */
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    padding: 3% 0 10% 0;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+
+    h2 {
+        color: $amarillo;
+        font-size: 3em;
+        padding-bottom: 2%;
+
+        @media screen and (max-width:550px) {
+            font-size: 1.5em;
+        }
+    }
+
+    form {
+        color: $amarillo;
+        font-size: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media screen and (max-width:850px) {
+        padding: 5% 0;
+    }
+
+    @media screen and (max-width:550px) {
+        font-size: 0.8em;
+        padding-bottom: 5%;
+        width: 100%;
+    }
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+#button {
+    margin-top: 2%;
+    padding: 1%;
+    background-color: $rosado;
+    color: $amarillo;
+    font-size: 1em;
+    border-radius: 20px;
+    border-style: none;
+    height: 10%;
+    display: block;
+    width: 30%;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+    @media screen and (max-width:550px) {
+        width: 40%;
+    }
+}
