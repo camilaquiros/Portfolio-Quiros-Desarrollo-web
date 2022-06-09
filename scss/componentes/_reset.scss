@@ -1,87 +1,105 @@
 /* RESETEO */
 * {
-    margin: 0%;
-    padding: 0%;
+  margin: 0%;
+  padding: 0%;
 }
 
 html {
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+
 }
 
-header, .slider, .location, .skills, .profile {
-    overflow: hidden;
+header,
+.slider,
+.location,
+.skills,
+.profile {
+  overflow: hidden;
 }
 
 body {
-    font-family: $sansserif;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: space-between;
-    padding-right: 0 !important;
-    overflow-x: hidden;
+  font-family: $sansserif;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  padding-right: 0 !important;
+  overflow-x: hidden;
+  cursor:url("../assets/cursor.png"), auto;
+  // &:hover{
+  //   cursor: url("../assets/cursorHover.png"), auto;
+  // }
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: $negro;
+  &:hover{
     color: $negro;
+  }
 }
 
-a:hover {
-    color: $negro;
+a, button, video::-webkit-media-controls-play-button, video::-webkit-media-controls-volume-slider-container, video::-webkit-media-controls-volume-slider, video::-webkit-media-controls-mute-button, video::-webkit-media-controls-fullscreen-button, video::-webkit-media-controls-timeline, video::-webkit-media-controls-current-time-display {
+  cursor: url("../assets/cursorHover.png"), auto !important;
+  &:hover{
+  cursor: url("../assets/cursorHover.png"), auto;
+  }
 }
 
 li {
-    list-style-type: none;
-}/* RESETEO */
+  list-style-type: none;
+} /* RESETEO */
 * {
-    margin: 0%;
-    padding: 0%;
+  margin: 0%;
+  padding: 0%;
 }
 
 html {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
-header, .slider, .location, .skills, .profile {
-    overflow: hidden;
+header,
+.slider,
+.location,
+.skills,
+.profile {
+  overflow: hidden;
 }
 
 body {
-    font-family: $sansserif;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: space-between;
-    padding-right: 0 !important;
+  font-family: $sansserif;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  padding-right: 0 !important;
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: $negro;
+  &:hover {
     color: $negro;
-}
-
-a:hover {
-    color: $negro;
+  }
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }

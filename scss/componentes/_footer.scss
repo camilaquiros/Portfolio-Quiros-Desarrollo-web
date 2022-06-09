@@ -1,139 +1,140 @@
 /* FOOTER */
 
 footer {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 1.5em;
-    justify-content: space-between;
-    padding: 2% 2% 2% 5%;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5em;
+  justify-content: space-between;
+  padding: 2% 2% 2% 5%;
 
-    @media screen and (max-width:1200px){
-        font-size: 1em;
-    }
+  @media screen and (max-width: 1200px) {
+    font-size: 1em;
+  }
 
-    @media screen and (max-width:550px) {
-        flex-direction: column;
-        padding: 2% 0 5% 0;
-        width: 100%;
-        align-items: center;
-    }
+  @media screen and (max-width: 550px) {
+    flex-direction: column;
+    padding: 2% 0 5% 0;
+    width: 100%;
+    align-items: center;
+  }
 }
 
 .footerRight {
-    width: 70%;
-    flex-direction: column;
-    align-items: flex-start;
-    p {
-        margin: 1%;
-        border-top: $blanco solid;
-        color: $blanco;
-        padding: 2% 0 0 2%;
+  width: 70%;
+  flex-direction: column;
+  align-items: flex-start;
+  p {
+    margin: 1%;
+    border-top: $blanco solid;
+    color: $blanco;
+    padding: 2% 0 0 2%;
 
-        @media screen and (max-width:550px) {
-            display: none;
-        }
+    @media screen and (max-width: 550px) {
+      display: none;
     }
+  }
 
-    @media screen and (max-width:550px) {
-        width: 100%;
-    }
+  @media screen and (max-width: 550px) {
+    width: 100%;
+  }
 }
 
 .footerNav {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 2% 0 1% 5%;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 2% 0 1% 5%;
+  width: 100%;
 
-    a {
-        padding: 0 2%;
-        color: $blanco;
-    }
-
-    li {
-        padding: 0 2%;
-        color: $blanco;
-
-        @media screen and (max-width:550px) {
-            padding: 2% 0;
-        }
-    }
-
-    @media screen and (max-width:550px) {
-        flex-direction: column;
-        align-items: center;
-        padding: 2% 0;
-        font-size: 1em;
-        font-weight: bold;
-        text-transform: uppercase;
-        width: 100%;
-    }
-}
-
-.footerNav a, .footerNav li {
+  a {
     padding: 0 2%;
     color: $blanco;
+  }
+
+  li {
+    padding: 0 2%;
+    color: $blanco;
+
+    @media screen and (max-width: 550px) {
+      padding: 2% 0;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 0;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+  }
+}
+
+.footerNav a,
+.footerNav li {
+  padding: 0 2%;
+  color: $blanco;
 }
 
 .socials {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 20%;
+  justify-content: space-around;
+  align-items: flex-end;
+
+  a {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    width: 20%;
-    justify-content: space-around;
-    align-items: flex-end;
+    flex-direction: row;
+    color: $blanco;
+    justify-content: flex-start;
+  }
 
-    a {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        color: $blanco;
-        justify-content: flex-start;
+  li {
+    width: 100%;
+
+    @media screen and (max-width: 550px) {
+      width: auto;
+      padding: 3% 5%;
     }
+  }
 
-    li {
-        width: 100%;
+  i {
+    font-size: 1.5em;
+  }
 
-        @media screen and (max-width:550px) {
-            width: auto;
-            padding: 3% 5%;
-        }
+  p {
+    align-self: center;
+    padding-left: 7%;
+
+    @media screen and (max-width: 550px) {
+      display: none;
     }
+  }
 
-    i {
-        font-size: 1.5em;
-    }
-    
-    p {
-        align-self: center;
-        padding-left: 7%;
-
-        @media screen and (max-width:550px) {
-            display: none;
-        }
-    }
-
-    @media screen and (max-width:550px) {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  @media screen and (max-width: 550px) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .parrafoMobile {
-    display: none;
+  display: none;
 
-    @media screen and (max-width:550px) {
-        display: flex;
-        align-self: center;
-        margin: 1%;
-        border-top: $blanco solid;
-        color: $blanco;
-        padding: 2% 0 0 2%;
-        text-align: center;
-    }
+  @media screen and (max-width: 550px) {
+    display: flex;
+    align-self: center;
+    margin: 1%;
+    border-top: $blanco solid;
+    color: $blanco;
+    padding: 2% 0 0 2%;
+    text-align: center;
+  }
 }

@@ -1,41 +1,41 @@
-    /* PROFILE */
+/* PROFILE */
 
 .profile {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 2% 0;
-    opacity: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2% 0;
+  opacity: 80%;
 
-    p {
-        width: 50%;
-        color: $negro;
-        font-size: 1.5em;
-        text-align: center;
-        @media screen and (max-width:1200px){
-            font-size: 1em;
-        }
-
-        @media screen and (max-width:550px) {
-            width: 80%;
-            padding-top: 5%;
-        }
-    }
-    
-    img {
-        width: 30%;
-        border-radius: 100%;
-        border: $turquesa;
-        border-style: dashed;
-        padding: 0.5%;
-
-        @media screen and (max-width:550px) {
-            width: 70%;
-        }
+  p {
+    width: 50%;
+    color: $negro;
+    font-size: 1.5em;
+    text-align: center;
+    @media screen and (max-width: 1200px) {
+      font-size: 1em;
     }
 
-    @media screen and (max-width:550px) {
-        flex-direction: column;
-        padding: 5% 0;
+    @media screen and (max-width: 550px) {
+      width: 80%;
+      padding-top: 5%;
     }
+  }
+
+  img {
+    width: 30%;
+    border-radius: 100%;
+    border: $turquesa;
+    border-style: dashed;
+    padding: 0.5%;
+
+    @media screen and (max-width: 550px) {
+      width: 70%;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    flex-direction: column;
+    padding: 5% 0;
+  }
 }
