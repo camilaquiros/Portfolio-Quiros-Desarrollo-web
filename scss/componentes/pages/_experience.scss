@@ -55,6 +55,38 @@
     }
 }
 
+.clickLeftDesktop, .clickRightDesktop {
+    width: 5%;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+    @media screen and (max-width:550px){
+        display: none;
+    }
+}
+
+.clickLeftDesktop {
+    transform: rotate(60deg);
+}
+
+.clickRightDesktop {
+    transform: rotate(-20deg);
+}
+
+.clickLeftMobile, .clickRightMobile {
+    display: none;
+    @media screen and (max-width:550px){
+        display: inline-block;
+        width: 8%;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+}
+
+.clickRightMobile {
+    transform: rotateY(180deg);
+}
+
 .experienceCard {
     background-color: $rosado;
     border-style: none;
@@ -69,22 +101,22 @@
     padding-bottom: 2%;
     width: 100%;
 
-    img {
-        border-radius: 20px;
-        border-style: dashed;
-        padding: 1%;
-        border-color: $turquesa;
-        margin: 2%;
-
-        @media screen and (max-width:550px) {
-            width: 80%;
-        }
-    }
-
     p {
         @media screen and (max-width:550px) {
             font-size: 1em;
         }
+    }
+}
+
+.memeGif {
+    border-radius: 20px;
+    border-style: dashed;
+    padding: 1%;
+    border-color: $turquesa;
+    margin: 2%;
+
+    @media screen and (max-width:550px) {
+        width: 80%;
     }
 }
 
@@ -122,38 +154,36 @@
     font-weight: bold;
 }
 
-.gif:hover {
-    transform: scale(1.5,1.5);
-    transition: all 1s;
+.gif {
+    position: fixed;
+    &:hover {
+        transform: scale(1.5,1.5);
+        transition: all 1s;
+    }
 }
 
 .worm {
-    position: absolute;
     bottom: 2px;
     left: 5%;
 }
 
 .bell {
-    position: absolute;
     top: 65%;
     left: 80%;
 }
 
 .mouth {
-    position: absolute;
     top: 60%;
     right: 80%;
 }
 
 .toaster {
-    position: absolute;
     top: 25%;
     left: 88%;
     z-index: 2;
 }
 
 .clock {
-    position: absolute;
     top: 28%;
     right: 90%;
     z-index: 2;
