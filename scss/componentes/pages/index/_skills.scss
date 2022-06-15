@@ -1,9 +1,7 @@
 /* SKILLS */
 
 .skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  @include flex(flex, wrap, initial, space-around);
   padding: 2% 5%;
 
   @media screen and (max-width: 550px) {
@@ -12,23 +10,21 @@
 }
 
 .skill {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  @include flex (flex, wrap, column, space-evenly, center);
   width: 30%;
   padding: 2%;
-  align-items: center;
-  justify-content: space-evenly;
 
   img {
-    width: 60%;
-    opacity: 60%;
+    width: 70%;
+    opacity: 50%;
+    -webkit-filter: drop-shadow(5px 5px 5px  transparentize($negro, 0.5));
+    filter: drop-shadow(5px 5px 5px transparentize($negro, 0.5));
   }
 
   p {
     padding: 5%;
     font-size: 1.5em;
-    font-weight: bolder;
+    font-weight: bold;
     text-align: center;
     color: $amarillo;
     font-family: $serif;
@@ -61,6 +57,7 @@
   transform: translate(-50%, -50%);
   color: $amarillo;
   font-weight: bold;
+  z-index: 3;
 }
 
 .titleSkill {

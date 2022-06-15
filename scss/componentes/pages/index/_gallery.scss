@@ -1,9 +1,7 @@
 /* INDEX */
 /* SLIDER/GRID */
 .slider {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  @include flex(flex, wrap, initial, center);
 
   @media screen and (max-width: 550px) {
     display: none;
@@ -83,16 +81,17 @@
 
 #imagen4 {
   grid-area: imagen4;
-  background-image: url(../assets/images/index/image4-1.jpeg);
+  background-image: url(../assets/images/index/image4.jpeg);
   border: $turquesa solid;
   animation-duration: 1s;
 }
 
 #imagen5 {
   grid-area: imagen5;
-  background-image: url(../assets/images/index/image5-1.png);
+  background-image: url(../assets/images/index/image5.png);
   background-color: $negro;
-  background-position: center;
+  background-position-x: center;
+  background-position-y: bottom;
   border: $amarillo solid;
   animation-duration: 1s;
 }

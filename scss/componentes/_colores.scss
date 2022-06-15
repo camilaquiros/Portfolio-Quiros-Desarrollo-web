@@ -1,27 +1,29 @@
 /* COLORES */
 
+@import "./base/extend";
+
 .slider {
-  background-color: $violeta;
+  @extend %violeta;
 }
 
 .profile {
-  background-color: $blanco;
+ @extend %blanco;
 }
 
 .location {
-  background-color: $amarillo;
+ @extend %amarillo;
 }
 
 .skills {
-  background-color: $rosado;
+  @extend %rosado;
 }
 
 footer {
-  background-color: $turquesa;
+  @extend %turquesa;
 }
 
 .experience {
-  background-color: $rosado;
+  @extend %rosado;
 }
 
 .bodyContact {

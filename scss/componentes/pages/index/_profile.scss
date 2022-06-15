@@ -1,9 +1,7 @@
 /* PROFILE */
 
 .profile {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  @include flex(flex, wrap, initial, space-evenly, center);
   padding: 2% 0;
   opacity: 80%;
 

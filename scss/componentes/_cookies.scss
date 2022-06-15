@@ -7,24 +7,22 @@
 
 .cookiesBack {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
+  @include flex(flex, wrap, initial, center, center);
 }
 
 .cookiesContent {
-  height: 30vh;
-  background-image: url(../assets/images/cookiesPattern.png);
-  background-size: contain;
-  background-color: $blanco;
+  background-image: url(../assets/images/cookies.svg);
+  background-size: 60%;
+  @extend %blanco;
+  height: fit-content;
 }
 
 .cookiesText {
-  display: flex;
+  @include flex(flex, wrap, initial, initial, center);
   font-family: $serif;
   font-size: 2em;
   font-weight: bold;
   text-align: center;
-  align-items: center;
   color: $negro;
 }
 
@@ -44,7 +42,7 @@
 
 .acceptCookies:hover,
 .configuration:hover {
-  background-color: $amarillo;
+  @extend %amarillo;
   color: $negro;
   border-width: 2px;
   border-style: dashed;
@@ -52,9 +50,9 @@
 }
 
 .acceptCookies {
-  background-color: $violeta;
+  @extend %violeta;
 }
 
 .configuration {
-  background-color: $blanco;
+  @extend %blanco;
 }

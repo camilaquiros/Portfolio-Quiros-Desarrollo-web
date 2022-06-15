@@ -1,13 +1,9 @@
 /* CONTACTO */
 
 .contact {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-direction: column;
+  @include flex(flex, wrap, column, center, center);
   padding: 3% 0 10% 0;
   width: 100%;
-  justify-content: center;
   height: 100%;
 
   h2 {
@@ -21,11 +17,9 @@
   }
 
   form {
+    @include flex(flex, wrap, column, initial, center);
     color: $amarillo;
     font-size: 2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
   @media screen and (max-width: 850px) {
@@ -40,16 +34,14 @@
 }
 
 .contactForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex(flex, wrap, column, initial, center);
   width: 80%;
 }
 
 #button {
   margin-top: 2%;
   padding: 1%;
-  background-color: $rosado;
+  @extend %rosado;
   color: $amarillo;
   font-size: 1em;
   border-radius: 20px;

@@ -1,3 +1,16 @@
 Wireframe del proyecto:
 https://whimsical.com/proyecto-portfolio-BcVddKb6jyGuTu2PzaCvJi
 
+Pase todas las imágenes posibles a SVG, me falta comprimir las imágenes del grid y el video.
+
+Importe el extend al principio del SCSS de colores porque importado en el style traía las propiedades al principio de la hoja de CSS. 
+
+Map get lo use solamente en reset, header y footer, la verdad no me gusto mucho la aplicación que le di, pero creo que utilice todas las keys del mapa para mostrar su uso.
+
+Mixin me resulto bastante util, todo el display flex lo pase a mixin en el proyecto, y busque que puedo hacer que algunos parámetros sean opcionales asi que direction, justify y align los setee para que por default sean initial si no les paso un parámetro. No encontré si es posible que si no paso un parámetro directamente no escriba la propiedad que es lo que preferiría que haga.
+
+
+SEO:
+Aplique de titulo a todas las paginas: Camila/Web Developer, y luego | y el html que corresponda.
+Puse la misma description en index y experiencia, porque no tengo mucha imaginación: Bienvenidos a mi portafolio, soy una desarrolladora web FullStack junior en búsqueda de mi primer trabajo. En contacto puse: Contactate conmigo, soy una desarrolladora web FullStack junior en búsqueda de mi primer trabajo.
+Mismas keywords en index y experiencia: web development, html, css, JavaScript, portafolio, web developer, desarrollador web, frontend, backend, full stack. En contacto agregue un par mas: web development, html, css, JavaScript, portafolio, web developer, desarrollador web, frontend, backend, full stack, contacto, formulario.

@@ -1,10 +1,7 @@
 /* EXPERIENCIA */
 
 .experience {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-direction: column;
+  @include flex(flex, wrap, column, initial, center);
   padding: 2% 0;
   width: 100%;
 
@@ -36,13 +33,13 @@
   color: $amarillo;
   text-decoration: none;
   font-size: 1em;
-  background-color: $violeta;
+  @extend %violeta;
   border-style: dashed;
   border-color: $negro;
   border-width: 2px;
 
   &:hover {
-    background-color: $turquesa;
+    @extend %turquesa;
     border-style: dashed;
     border-color: $negro;
     border-width: 2px;
@@ -53,7 +50,7 @@
     color: $amarillo;
     text-decoration: none;
     font-size: 1em;
-    background-color: $turquesa;
+    @extend %turquesa;
     border-style: dashed;
     border-color: $negro;
     border-width: 2px;
@@ -102,16 +99,14 @@
 }
 
 .experienceCard {
-  background-color: $rosado;
+  @extend %rosado;
   border-style: none;
   align-items: center;
   justify-content: center;
 }
 
 .meme {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex(flex, wrap, column, initial, center);
   padding-bottom: 2%;
   width: 100%;
 
@@ -135,24 +130,18 @@
 }
 
 .memeVideo {
-  display: flex;
-  flex-direction: column;
+  @include flex(flex, wrap, column, center, center);
   padding-bottom: 2%;
-  justify-content: center;
-  align-items: center;
 }
 
 .memeVideoTab {
-  background-image: url(../assets/images/experience/tab.png);
-  background-size: 90%;
+  @include flex(flex, wrap, initial, center,center);
+  background-image: url(../assets/images/experience/tab.svg);
   background-repeat: no-repeat;
   padding: 12% 0 3% 0;
   margin-top: 5%;
   width: 100%;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   video {
     border-radius: 20px;
@@ -161,6 +150,10 @@
     @media screen and (max-width: 850px) {
       width: 85%;
     }
+  }
+
+  @media screen and (max-width: 850px) {
+    width: 85%;
   }
 }
 
@@ -171,9 +164,10 @@
 .gif {
   position: fixed;
   &:hover {
-    transform: scale(1.5, 1.5);
+    transform: scale(1.3, 1.3);
     transition: all 1s;
   }
+  z-index: 3;
 }
 
 .worm {
@@ -204,11 +198,7 @@
 }
 
 @media screen and (max-width: 850px) {
-  .worm,
-  .bell,
-  .clock,
-  .mouth,
-  .toaster {
+  .gif {
     display: none;
   }
 }

@@ -1,4 +1,5 @@
 /* RESETEO */
+
 * {
   margin: 0%;
   padding: 0%;
@@ -21,30 +22,22 @@ header,
 
 body {
   font-family: $sansserif;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  @include flex(flex, wrap , column, space-between);
   min-height: 100vh;
-  justify-content: space-between;
   padding-right: 0 !important;
   overflow-x: hidden;
   cursor:url("../assets/cursor.png"), auto;
-  // &:hover{
-  //   cursor: url("../assets/cursorHover.png"), auto;
-  // }
 }
 
 main {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  @include flex(flex, wrap, column)
 }
 
 a {
-  text-decoration: none;
-  color: $negro;
+  text-decoration: map-get($textos, textDecoration);
+  color: map-get($textos, color);
   &:hover{
-    color: $negro;
+    color: map-get($textos, color);
   }
 }
 
@@ -52,51 +45,6 @@ a, button, video::-webkit-media-controls-play-button, video::-webkit-media-contr
   cursor: url("../assets/cursorHover.png"), auto !important;
   &:hover{
   cursor: url("../assets/cursorHover.png"), auto;
-  }
-}
-
-li {
-  list-style-type: none;
-} /* RESETEO */
-* {
-  margin: 0%;
-  padding: 0%;
-}
-
-html {
-  height: 100%;
-  width: 100%;
-}
-
-header,
-.slider,
-.location,
-.skills,
-.profile {
-  overflow: hidden;
-}
-
-body {
-  font-family: $sansserif;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  min-height: 100vh;
-  justify-content: space-between;
-  padding-right: 0 !important;
-}
-
-main {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-
-a {
-  text-decoration: none;
-  color: $negro;
-  &:hover {
-    color: $negro;
   }
 }
 
