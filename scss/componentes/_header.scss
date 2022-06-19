@@ -1,7 +1,7 @@
 /* HEADER */
 
 header {
-  @include flex(flex, initial, initial, space-around);
+  @include flex(flex, null, null, space-around, null);
   background-image: url(../assets/images/background.svg);
   background-repeat: repeat;
   background-size: contain;
@@ -42,7 +42,7 @@ header {
 }
 
 .navbarDesk {
-  @include flex (flex, wrap);
+  @include flex (flex, wrap, null, null, null);
   width: 60%;
   ul {
     width: 100%;

@@ -1,7 +1,7 @@
 /* SKILLS */
 
 .skills {
-  @include flex(flex, wrap, initial, space-around);
+  @include flex(flex, wrap, initial, space-around, null);
   padding: 2% 5%;
 
   @media screen and (max-width: 550px) {
@@ -16,9 +16,9 @@
 
   img {
     width: 70%;
-    opacity: 50%;
-    -webkit-filter: drop-shadow(5px 5px 5px  transparentize($negro, 0.5));
-    filter: drop-shadow(5px 5px 5px transparentize($negro, 0.5));
+    // opacity: 50%;
+    -webkit-filter: drop-shadow(5px 5px 5px #3938382e);
+    filter: drop-shadow(5px 5px 5px #3938382e);
   }
 
   p {

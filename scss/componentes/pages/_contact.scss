@@ -17,7 +17,7 @@
   }
 
   form {
-    @include flex(flex, wrap, column, initial, center);
+    @include flex(flex, wrap, column, null, center);
     color: $amarillo;
     font-size: 2em;
   }
@@ -34,7 +34,7 @@
 }
 
 .contactForm {
-  @include flex(flex, wrap, column, initial, center);
+  @include flex(flex, wrap, column, null, center);
   width: 80%;
 }
 

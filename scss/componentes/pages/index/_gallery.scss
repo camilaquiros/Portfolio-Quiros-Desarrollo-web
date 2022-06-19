@@ -1,7 +1,7 @@
 /* INDEX */
 /* SLIDER/GRID */
 .slider {
-  @include flex(flex, wrap, initial, center);
+  @include flex(flex, wrap, initial, center, null);
 
   @media screen and (max-width: 550px) {
     display: none;
@@ -56,7 +56,7 @@
 
 #imagen1 {
   grid-area: imagen1;
-  background-image: url(../assets/images/index/image1.jpeg);
+  background-image: url(../assets/images/index/image1.jpg);
   background-position-y: 40%;
   border: $amarillo solid;
   animation-duration: 1s;
@@ -64,7 +64,7 @@
 
 #imagen2 {
   grid-area: imagen2;
-  background-image: url(../assets/images/index/image2.jpeg);
+  background-image: url(../assets/images/index/image2.jpg);
   background-position-x: center;
   background-position-y: 20%;
   border: $turquesa solid;
@@ -73,7 +73,7 @@
 
 #imagen3 {
   grid-area: imagen3;
-  background-image: url(../assets/images/index/image3.jpeg);
+  background-image: url(../assets/images/index/image3.jpg);
   border: $rosado solid;
   background-position: center;
   animation-duration: 1s;
@@ -81,14 +81,14 @@
 
 #imagen4 {
   grid-area: imagen4;
-  background-image: url(../assets/images/index/image4.jpeg);
+  background-image: url(../assets/images/index/image4.jpg);
   border: $turquesa solid;
   animation-duration: 1s;
 }
 
 #imagen5 {
   grid-area: imagen5;
-  background-image: url(../assets/images/index/image5.png);
+  background-image: url(../assets/images/index/image5.jpg);
   background-color: $negro;
   background-position-x: center;
   background-position-y: bottom;
@@ -98,7 +98,7 @@
 
 #imagen6 {
   grid-area: imagen6;
-  background-image: url(../assets/images/index/image6.jpeg);
+  background-image: url(../assets/images/index/image6.jpg);
   border: $rosado solid;
   animation-duration: 1s;
 }

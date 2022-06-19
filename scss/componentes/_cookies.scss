@@ -7,7 +7,7 @@
 
 .cookiesBack {
   min-height: 100vh;
-  @include flex(flex, wrap, initial, center, center);
+  @include flex(flex, wrap, null, center, center);
 }
 
 .cookiesContent {
@@ -18,7 +18,7 @@
 }
 
 .cookiesText {
-  @include flex(flex, wrap, initial, initial, center);
+  @include flex(flex, wrap, null, null, center);
   font-family: $serif;
   font-size: 2em;
   font-weight: bold;

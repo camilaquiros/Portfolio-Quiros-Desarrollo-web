@@ -1,9 +1,10 @@
 /* PROFILE */
 
 .profile {
-  @include flex(flex, wrap, initial, space-evenly, center);
-  padding: 2% 0;
+  @include flex(flex, wrap, null, space-evenly, center);
+  padding: 3% 0;
   opacity: 80%;
+  height: auto;
 
   p {
     width: 50%;
@@ -20,20 +21,140 @@
     }
   }
 
-  img {
-    width: 30%;
-    border-radius: 100%;
-    border: $turquesa;
-    border-style: dashed;
-    padding: 0.5%;
-
-    @media screen and (max-width: 550px) {
-      width: 70%;
-    }
-  }
-
   @media screen and (max-width: 550px) {
-    flex-direction: column;
     padding: 5% 0;
   }
 }
+
+.flipCard {
+  width: 35%;
+  position: relative;
+  perspective: 1000px;
+  height: 100%;
+
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 70%;
+  }
+}
+
+.flipInner{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flipInner:hover, .flipInner:focus {
+  transform: rotateY(180deg);
+  transition-delay: 0.6s;
+}
+
+.front, .back {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  img {
+    width: 100%;
+    border-radius: 100%;
+    border: $turquesa;
+    border-style: dashed;
+    padding: 1%;
+  }
+
+}
+
+.front {
+  p{
+    display: none;
+    position: absolute;
+    font-size: 4em;
+    font-weight: bold;
+    width: fit-content;
+    color: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-text-stroke: 1px $turquesa;
+    // mix-blend-mode: darken;
+  }
+
+  &:hover {
+    p {
+      display: block;
+      -webkit-animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+      animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  
+      @media screen and (max-width: 1200px) {
+        font-size: 2.5em;
+      }
+  
+      @media screen and (max-width: 850px) {
+        font-size: 1.5em;
+      }
+
+      @media screen and (max-width: 550px) {
+        font-size: 2em;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.back {
+  transform: rotateY(180deg);
+
+  p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    font-weight: bold;
+    width: fit-content;
+    // color: transparentize($turquesa, 0.4);
+    color: transparent;
+    -webkit-text-stroke: 1px $blanco;
+    // mix-blend-mode: lighten;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 2.5em;
+    }
+
+    @media screen and (max-width: 850px) {
+      font-size: 1.5em;
+    }
+
+    @media screen and (max-width: 550px) {
+      font-size: 2em;
+    }
+
+  }
+}
+
+

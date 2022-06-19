@@ -12,17 +12,9 @@ html {
 
 }
 
-header,
-.slider,
-.location,
-.skills,
-.profile {
-  overflow: hidden;
-}
-
 body {
   font-family: $sansserif;
-  @include flex(flex, wrap , column, space-between);
+  @include flex(flex, wrap , column, space-between, null);
   min-height: 100vh;
   padding-right: 0 !important;
   overflow-x: hidden;
@@ -30,7 +22,7 @@ body {
 }
 
 main {
-  @include flex(flex, wrap, column)
+  @include flex(flex, wrap, column, null, null)
 }
 
 a {

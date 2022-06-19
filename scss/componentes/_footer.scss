@@ -1,7 +1,7 @@
 /* FOOTER */
 
 footer {
-  @include flex(flex, wrap, initial, space-between);
+  @include flex(flex, wrap, null, space-between, null);
   font-size: 1.5em;
   padding: 2% 2% 2% 5%;
 
@@ -38,7 +38,7 @@ footer {
 }
 
 .footerNav {
-  @include flex(flex, wrap, row, flex-start);
+  @include flex(flex, wrap, row, flex-start, null);
   padding: 0 0 1% 5%;
   width: 100%;
 
@@ -70,7 +70,7 @@ footer {
   width: 20%;
 
   a {
-    @include flex(flex, wrap, row, flex-start);
+    @include flex(flex, wrap, row, flex-start, null);
     color: $blanco;
   }
 
