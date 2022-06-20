@@ -10,7 +10,7 @@
     width: 50%;
     color: $negro;
     font-size: 1.5em;
-    text-align: center;
+    text-align: justify;
     @media screen and (max-width: 1200px) {
       font-size: 1em;
     }
@@ -85,7 +85,6 @@
     left: 50%;
     transform: translate(-50%,-50%);
     -webkit-text-stroke: 1px $turquesa;
-    // mix-blend-mode: darken;
   }
 
   &:hover {
@@ -137,10 +136,8 @@
     font-size: 4em;
     font-weight: bold;
     width: fit-content;
-    // color: transparentize($turquesa, 0.4);
     color: transparent;
     -webkit-text-stroke: 1px $blanco;
-    // mix-blend-mode: lighten;
 
     @media screen and (max-width: 1200px) {
       font-size: 2.5em;

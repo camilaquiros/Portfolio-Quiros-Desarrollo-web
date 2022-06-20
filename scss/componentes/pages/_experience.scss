@@ -11,7 +11,7 @@
     padding: 3% 0 2% 0;
 
     @media screen and (max-width: 550px) {
-      font-size: 2em;
+      font-size: 2.5em;
     }
   }
 
@@ -20,23 +20,24 @@
     font-size: 2em;
     padding: 1%;
     text-align: center;
-    width: 70%;
 
     @media screen and (max-width: 550px) {
-      width: 90%;
       font-size: 1.5em;
     }
   }
 }
 
+/* gif */
 .experienceButton {
   color: $amarillo;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 2em;
   @extend %violeta;
   border-style: dashed;
   border-color: $negro;
   border-width: 2px;
+  text-align: center;
+  width: 70%;
 
   &:hover {
     @extend %turquesa;
@@ -49,7 +50,7 @@
   &:focus {
     color: $amarillo;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 2em;
     @extend %turquesa;
     border-style: dashed;
     border-color: $negro;
@@ -58,6 +59,7 @@
 
   @media screen and (max-width: 550px) {
     font-size: 1.5em;
+    width: 90%;
     &:focus {
       font-size: 1.5em;
     }
@@ -66,7 +68,7 @@
 
 .clickLeftDesktop,
 .clickRightDesktop {
-  width: 5%;
+  width: 4%;
   animation-duration: 1s;
   animation-iteration-count: infinite;
 
@@ -129,6 +131,7 @@
   }
 }
 
+/* video */
 .memeVideo {
   @include flex(flex, wrap, column, center, center);
   padding-bottom: 2%;
@@ -157,12 +160,125 @@
   }
 }
 
+/* proyectos-titulo */
+.cheems {
+  width: 100%;
+  @include flex (flex, wrap, row, space-evenly, null);
+  padding: 5% 0 2% 0;
+
+  img {
+    width: 20%;
+    z-index: 5;
+    padding: 1%;
+    border: 3px $amarillo dashed;
+    border-radius: 25px;
+    background-color: $turquesa;
+
+    @media screen and (max-width: 550px) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 100%;
+  }
+}
+
+.cheemsMid {
+  width: 50%;
+  @include flex(flex, wrap, null, center, center);
+
+  @media screen and (max-width: 550px) {
+    width: 100%;
+    padding: 8% 0 3% 0;
+  }
+}
+
+.lineCheems {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  align-self: center;
+  border-top: 3px $amarillo;
+  border-top-style: dashed;
+}
+
+.titleCheems {
+  color: $amarillo;
+  font-weight: bold;
+  font-size: 2em;
+  background-color: $turquesa;
+  padding: 1%;
+  border-radius: 25px;
+  border: 3px $amarillo dashed;
+  text-align: center;
+  z-index: 3;
+
+  @media screen and (max-width: 850px) {
+    font-size: 1.5em;
+  }
+
+  @media screen and (max-width: 550px) {
+    font-size: 1.3em;
+    width: 70%;
+  }
+}
+
+/* proyectos*/
+.proyects {
+  width: 95%;
+  padding: 2% 0;
+  @include flex(flex, wrap, null, center, center);
+  ul {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    grid-column-gap: 2%;
+    grid-row-gap: 3vh;
+    justify-items: center;
+    padding: 0;
+
+    @media screen and (max-width: 1200px) {
+      grid-template-columns: 4fr 4fr 4fr;
+    }    
+
+    @media screen and (max-width: 850px) {
+      grid-template-columns: 6fr 6fr;
+    }   
+
+    @media screen and (max-width: 550px) {
+      grid-template-columns: 12fr;
+      width: 75%;
+    }  
+  }
+}
+
+.proyect{
+  @include flex(flex, wrap, null, center, center);
+  width: 100%;
+  padding: 2% 0;
+  background-color: $violeta;
+  border-radius: 5px;
+
+  a{
+    color: $amarillo;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+  }
+
+  &:hover, &:focus {
+    background-color: $turquesa;
+  }
+}
+
 .bolder {
   font-weight: bold;
 }
 
 .gif {
-  position: fixed;
+  position: absolute;
   &:hover {
     transform: scale(1.3, 1.3);
     transition: all 1s;
@@ -188,13 +304,11 @@
 .toaster {
   top: 25%;
   left: 88%;
-  z-index: 2;
 }
 
 .clock {
   top: 28%;
   right: 90%;
-  z-index: 2;
 }
 
 @media screen and (max-width: 850px) {

@@ -3,10 +3,14 @@
 footer {
   @include flex(flex, wrap, null, space-between, null);
   font-size: 1.5em;
-  padding: 2% 2% 2% 5%;
+  padding: 2% 2% 3% 5%;
 
   @media screen and (max-width: 1200px) {
     font-size: map-get($textos, textSize);
+  }
+
+  @media screen and (max-width:850px) {
+    padding-bottom: 5%;
   }
 
   @media screen and (max-width: 550px) {
@@ -25,10 +29,15 @@ footer {
     margin: 1%;
     border-top: $blanco solid;
     color: $blanco;
-    padding: 2% 0 0 2%;
+    padding: 4% 0 2% 2%;
 
     @media screen and (max-width: 550px) {
       display: none;
+    }
+
+    a {
+      color: $blanco;
+      font-weight: bold;
     }
   }
 
@@ -66,20 +75,24 @@ footer {
 }
 
 .socials {
-  @include flex(flex, wrap, column, space-around, flex-end);
+  @include flex(flex, wrap, null, space-around, center);
   width: 20%;
-
-  a {
-    @include flex(flex, wrap, row, flex-start, null);
-    color: $blanco;
-  }
+  margin: 0;
 
   li {
+    @include flex(flex, wrap, null, center, flex-start);
     width: 100%;
 
     @media screen and (max-width: 550px) {
       width: auto;
       padding: 3% 5%;
+    }
+
+    a {
+      @include flex(flex, wrap, row, flex-start, center);
+      color: $blanco;
+      width: 100%;
+      text-align: center;
     }
   }
 
@@ -90,6 +103,8 @@ footer {
   p {
     align-self: center;
     padding-left: 7%;
+    justify-self: center;
+    margin: 0;
 
     @media screen and (max-width: 550px) {
       display: none;
@@ -97,7 +112,7 @@ footer {
   }
 
   @media screen and (max-width: 850px) {
-    width: 30%;
+    width: 27.5%;
   }
 
   @media screen and (max-width: 550px) {
@@ -110,6 +125,11 @@ footer {
 
 .parrafoMobile {
   display: none;
+
+  a {
+    color: $blanco;
+    font-weight: bold;
+  }
 
   @media screen and (max-width: 550px) {
     display: block;

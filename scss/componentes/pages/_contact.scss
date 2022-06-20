@@ -10,10 +10,6 @@
     color: $amarillo;
     font-size: 3em;
     padding-bottom: 2%;
-
-    @media screen and (max-width: 550px) {
-      font-size: 1.5em;
-    }
   }
 
   form {
