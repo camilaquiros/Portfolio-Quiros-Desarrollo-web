@@ -252,19 +252,25 @@
 	background:$blanco;
 	border-left:2px solid $negro;
 	border-right:2px solid $negro;
-}
+} 
 
 #speech-txt {
 	width: 100%;
   padding: 0 10px;
-	font-family: $serif;
-	font-size:1em;
-  font-weight: bold;
-	color: $negro;
-	text-align:center;
 	background:$blanco;
 	border-left:2px solid $negro;
 	border-right:2px solid $negro;
+
+  p {
+    width: 100%;
+    font-family: $serif;
+    font-size:1em;
+    font-weight: bold;
+    color: $negro;
+    text-align:center;
+    padding: 0;
+    margin: 0;
+  }
 
   @media screen and (max-width: 1200px) {
     font-size: 0.8em;
