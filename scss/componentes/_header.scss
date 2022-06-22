@@ -17,14 +17,18 @@ header {
 .brand {
   text-align: map-get($textos, textAlign);
   padding: 1%;
-  border-style: dotted;
+  border-style: dashed;
   border-radius: 25px;
-  @extend %violeta;
+  background: linear-gradient(120deg, rgba(242,255,141,0.8) 12%, rgba(255,153,193,0.8) 34%, rgba(191,158,236,0.8) 68%, rgba(4,186,216,0.8) 90%);
+  backdrop-filter: blur(1px);
   color: map-get($textos, color);
   font-family: $serif;
   font-size: 1.5em;
-  opacity: 80%;
   align-self: center;
+
+  &:hover {
+    background: linear-gradient(120deg, $amarillo 12%, $rosado 34%, $violeta 68%, $turquesa 90%);
+  }
 
   @media screen and (max-width: 1200px) {
     font-size: map-get($textos, textSize);
@@ -51,6 +55,11 @@ header {
       font-size: 2em;
       padding: 2%;
       background-color: transparentize(white, 0.5);
+
+      &:hover {
+        transform: scale(1.1, 1.1);
+        transition: all 0.5s;
+      }
 
       @media screen and (max-width: 1200px) {
         font-size: 1.5em;

@@ -153,7 +153,7 @@
                 <i class="fa-brands fa-instagram"></i>
                 <p>Instagram</p>
             </a></li>
-            <li><a href="https://www.linkedin.com" target="_blank">
+            <li><a href="https://www.linkedin.com/in/camilaquiros/" target="_blank">
                 <i class="fa-brands fa-linkedin"></i>
                 <p>LinkedIn</p>
             </a></li>
@@ -172,6 +172,12 @@
     <script>
         var myModal = new bootstrap.Modal(document.getElementById('myModal'), {})
         myModal.toggle()
+    </script>
+    <script>
+        window.addEventListener("load", function(event) {
+            document.getElementsByClassName("disclaimer")[0].remove();
+            console.log("Eliminado!");
+        });
     </script>
 </body>
 </html>

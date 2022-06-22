@@ -5,9 +5,9 @@
   padding: 5% 2%;
 
   iframe {
-    border: $violeta;
-    padding: 0.5%;
-    border-style: dashed;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(215deg, $violeta 47%, $turquesa 81%);
     width: 40%;
     height: 450px;
 

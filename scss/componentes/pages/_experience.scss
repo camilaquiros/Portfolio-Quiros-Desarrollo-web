@@ -33,17 +33,13 @@
   text-decoration: none;
   font-size: 2em;
   @extend %violeta;
-  border-style: dashed;
-  border-color: $negro;
-  border-width: 2px;
+  border: 3px dashed $negro;
   text-align: center;
   width: 70%;
 
   &:hover {
     @extend %turquesa;
-    border-style: dashed;
-    border-color: $negro;
-    border-width: 2px;
+    border: 3px dashed $negro;
     color: $amarillo;
   }
 
@@ -52,9 +48,7 @@
     text-decoration: none;
     font-size: 2em;
     @extend %turquesa;
-    border-style: dashed;
-    border-color: $negro;
-    border-width: 2px;
+    border: 3px dashed $negro;
   }
 
   @media screen and (max-width: 550px) {
@@ -123,7 +117,7 @@
   border-radius: 20px;
   border-style: dashed;
   padding: 1%;
-  border-color: $turquesa;
+  border-color: $negro;
   margin: 2%;
 
   @media screen and (max-width: 550px) {
@@ -163,14 +157,21 @@
 /* proyectos-titulo */
 .cheems {
   width: 100%;
-  @include flex (flex, wrap, row, space-evenly, null);
+  @include flex (flex, wrap, row, space-around, null);
   padding: 5% 0 2% 0;
 
+  @media screen and (max-width: 550px) {
+    width: 100%;
+  }
+}
+
+.cheem {
+  width: 20%;
+  z-index: 5;
+  position: relative;
   img {
-    width: 20%;
-    z-index: 5;
     padding: 1%;
-    border: 3px $amarillo dashed;
+    border: 3px $amarillo solid;
     border-radius: 25px;
     background-color: $turquesa;
 
@@ -178,10 +179,137 @@
       display: none;
     }
   }
+}
 
-  @media screen and (max-width: 550px) {
-    width: 100%;
+
+@keyframes shrink {
+  0% {
+    transform: scale(1);
   }
+  100% {
+    transform: scale(0);
+  }
+}
+
+#speech-bubble {
+	width:150px;
+  z-index: 10;
+  position: absolute;
+  left: 20%;
+  top: -5%;
+  transform-origin: 50% 100%;
+  transform: scale(0);
+  animation-fill-mode: forwards;
+  animation-name: shrink;
+  animation-duration: 0.3s;
+
+  @media screen and (max-width: 850px) {
+    display: none;
+  }
+}
+
+@keyframes expand-bounce {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cheem {
+  &:hover {
+    #speech-bubble {
+      animation-name: expand-bounce;
+      animation-duration: 0.8s;
+    }
+  }
+}
+
+#bub-part-a {
+	margin-left:6px;
+	width:calc(100% - 12px);
+	height:2px;
+	background:$negro;
+}
+
+#bub-part-b {
+	margin-left:4px;
+	width:calc(100% - 8px);
+	height:2px;
+	background: $blanco;
+	border-left:2px solid $negro;
+	border-right:2px solid $negro;
+}
+
+#bub-part-c {
+	margin-left:2px;
+	width:calc(100% - 4px);
+	height:2px;
+	background:$blanco;
+	border-left:2px solid $negro;
+	border-right:2px solid $negro;
+}
+
+#speech-txt {
+	width: 100%;
+  padding: 0 10px;
+	font-family: $serif;
+	font-size:1em;
+  font-weight: bold;
+	color: $negro;
+	text-align:center;
+	background:$blanco;
+	border-left:2px solid $negro;
+	border-right:2px solid $negro;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 0.8em;
+  }
+
+  @media screen and (max-width: 850px) {
+    font-size: 0.6em;
+  }
+}
+
+#speech-arrow {
+	margin-top:-2px;
+	margin-left:110px;
+}
+
+#arrow-w {
+	width:8px;
+	height:8px;
+	background: $blanco;
+	border-left:2px solid $negro;
+	border-right:2px solid $negro;
+}
+
+#arrow-x {
+	width:6px;
+	height:2px;
+	background:$blanco;
+	border-left:2px solid $negro;
+	border-right:2px solid $negro;
+}
+
+#arrow-y {
+	margin-left:-2px;
+	width:6px;
+	height:2px;
+	background:$blanco;
+	border-left:2px solid $negro;
+	border-right:2px solid $negro;
+}
+
+#arrow-z {
+	margin-left:-2px;
+	width:4px;
+	height:2px;
+	background: $negro;
 }
 
 .cheemsMid {
@@ -200,7 +328,7 @@
   height: 1px;
   align-self: center;
   border-top: 3px $amarillo;
-  border-top-style: dashed;
+  border-top-style: solid;
 }
 
 .titleCheems {
@@ -210,7 +338,7 @@
   background-color: $turquesa;
   padding: 1%;
   border-radius: 25px;
-  border: 3px $amarillo dashed;
+  border: 3px $amarillo solid;
   text-align: center;
   z-index: 3;
 
@@ -259,6 +387,10 @@
   padding: 2% 0;
   background-color: $violeta;
   border-radius: 5px;
+  border: 3px dashed $negro;
+  z-index: 1;
+  transition: all 0.3s ease;
+  position: relative;
 
   a{
     color: $amarillo;
@@ -266,10 +398,25 @@
     font-weight: bold;
     width: 100%;
     text-align: center;
+    pointer-events: none;
   }
 
-  &:hover, &:focus {
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
     background-color: $turquesa;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+
+  &:hover::after {
+    left: 0;
+    width: 100%;
   }
 }
 

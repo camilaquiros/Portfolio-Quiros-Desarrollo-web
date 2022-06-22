@@ -2,7 +2,7 @@
 
 .contact {
   @include flex(flex, wrap, column, center, center);
-  padding: 3% 0 10% 0;
+  padding: 3% 0 20% 0;
   width: 100%;
   height: 100%;
 
@@ -41,12 +41,33 @@
   color: $amarillo;
   font-size: 1em;
   border-radius: 20px;
-  border-style: none;
   height: 10%;
   display: block;
   width: 30%;
   animation-duration: 1s;
   animation-iteration-count: infinite;
+  border: 3px dashed $negro;
+  z-index: 1;
+  transition: all 0.3s ease;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: $turquesa;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+
+  &:hover::after {
+    left: 0;
+    width: 100%;
+  }
 
   @media screen and (max-width: 550px) {
     width: 40%;

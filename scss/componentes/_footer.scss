@@ -38,6 +38,9 @@ footer {
     a {
       color: $blanco;
       font-weight: bold;
+      &:hover, &:focus {
+        color: $amarillo;
+      }
     }
   }
 
@@ -72,6 +75,10 @@ footer {
 .footerNav li {
   padding: 2%;
   color: $blanco;
+
+  &:hover, &:focus {
+    color: $amarillo;
+  }
 }
 
 .socials {
@@ -93,6 +100,10 @@ footer {
       color: $blanco;
       width: 100%;
       text-align: center;
+
+      &:hover, &:focus {
+        color: $amarillo;
+      }
     }
   }
 
@@ -129,6 +140,10 @@ footer {
   a {
     color: $blanco;
     font-weight: bold;
+
+    &:hover, &:focus {
+      color: $amarillo;
+    }
   }
 
   @media screen and (max-width: 550px) {

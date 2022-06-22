@@ -3,13 +3,27 @@
 * {
   margin: 0%;
   padding: 0%;
+  scrollbar-width: thin;
+  scrollbar-color: $violeta $amarillo;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $amarillo;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $violeta;
+  border-radius: 20px;
 }
 
 html {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
-
 }
 
 body {

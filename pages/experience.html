@@ -87,12 +87,32 @@
         </div>
         <!-- PROYECTOS -->
         <div class="cheems">
-            <img src="../assets/images/CHEEMS2.svg" alt="">
+            <div class="cheem">
+                <div id="speech-bubble">
+                    <div id="bub-part-a"></div>
+                    <div id="bub-part-b"></div>
+                    <div id="bub-part-c"></div>
+                    <div id="speech-txt">Hice un Hello World en HTML</div>
+                    <div id="bub-part-c"></div>
+                    <div id="bub-part-b"></div>
+                    <div id="bub-part-a"></div>
+            
+                    <div id="speech-arrow">
+                        <div id="arrow-w"></div>
+                        <div id="arrow-x"></div>
+                        <div id="arrow-y"></div>
+                        <div id="arrow-z"></div>
+                    </div><!--end arrow-->
+                </div><!--end speech bubble-->
+                <img id="cheem" src="../assets/images/CHEEMS2.svg" alt="">
+            </div>
             <div class="lineCheems"></div>
             <div class="cheemsMid">
                 <div class="titleCheems">PROYECTOS DE WEB DEVELOPMENT</div>
             </div>
-            <img src="../assets/images/CHEEMS1.svg" alt="">
+            <div class="cheem">
+                <img src="../assets/images/CHEEMS1.svg" alt="">
+            </div>
         </div>
         <div class="proyects">
             <ul>
@@ -102,10 +122,10 @@
                 <li class="proyect"><a href="">Cronometro</a></li>
                 <li class="proyect"><a href="">Lista de super</a></li>
                 <li class="proyect"><a href="">Notas</a></li>
-                <li class="proyect"><a href="">Quizz game</a></li>
+                <li class="proyect"><a href="">Quiz game</a></li>
                 <li class="proyect"><a href="">Landing page</a></li>
                 <li class="proyect"><a href="">Red social</a></li>
-                <li class="proyect"><a href="">Ecommerce</a></li>
+                <li class="proyect"><a href="">E-commerce</a></li>
             </ul>
         </div>
     </main>
@@ -126,7 +146,7 @@
                 <i class="fa-brands fa-instagram"></i>
                 <p>Instagram</p>
             </a></li>
-            <li><a href="https://www.linkedin.com" target="_blank">
+            <li><a href="https://www.linkedin.com/in/camilaquiros/" target="_blank">
                 <i class="fa-brands fa-linkedin"></i>
                 <p>LinkedIn</p>
             </a></li>
@@ -141,6 +161,12 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+        window.addEventListener("load", function(event) {
+            document.getElementsByClassName("disclaimer")[0].remove();
+            console.log("Eliminado!");
+        });
     </script>
 </body>
 </html>
