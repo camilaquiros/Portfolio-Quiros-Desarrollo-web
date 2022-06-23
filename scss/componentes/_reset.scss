@@ -5,6 +5,16 @@
   padding: 0%;
   scrollbar-width: thin;
   scrollbar-color: $violeta $amarillo;
+
+  &::selection {
+    background-color: $turquesa;
+    color: $amarillo;
+  }
+
+  &::-moz-selection {
+    background-color: $turquesa;
+    color: $amarillo;
+  }
 }
 
 *::-webkit-scrollbar {
@@ -32,7 +42,9 @@ body {
   min-height: 100vh;
   padding-right: 0 !important;
   overflow-x: hidden;
+
   cursor:url("../assets/cursor.png"), auto;
+
   &:active{
     cursor: url("../assets/cursorHover.png"), auto;
   }
